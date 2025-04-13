@@ -5,8 +5,6 @@ def re_order(arr,first,last):
         arr[first+i] = arr[last-i]
         arr[last-i] = swap
 
-
-
 a=list()
 for i in range(1,21):
     a.append(i)
