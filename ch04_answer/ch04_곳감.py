@@ -16,9 +16,6 @@ for i in range(m):
             object = persimmon[where-1].pop()
             persimmon[where-1].insert(0,object)
 
-for x in range(n):
-    print(persimmon[x])
-
 sum = 0
 s = -1
 e = n+1
