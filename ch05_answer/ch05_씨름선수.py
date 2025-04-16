@@ -1,15 +1,14 @@
-import sys
-sys.stdin=open("input.txt", "r")
-n=int(input())
-body=[]
+n = int(input())
+sports=[]
 for i in range(n):
-    a, b=map(int, input().split())
-    body.append((a, b))
-body.sort(reverse=True)
-largest=0
-cnt=0
-for x, y in body:
-    if y>largest:
-        largest=y
-        cnt+=1
+    x, y = map(int,input().split())
+    sports.append((x,y))
+
+sports.sort(reverse=True)
+cnt = 0
+heavy = 0
+for x, y in sports:
+    if(y>heavy):
+        cnt += 1
+        heavy = y
 print(cnt)
