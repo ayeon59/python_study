@@ -1,8 +1,7 @@
 a = [list(map(int,input().split())) for _ in range (7)]
-
+n = int(input())
 num = 0
-row = 0
-col = 0
+
 for i in range(7):
     for j in range(3):
         if(a[i][j]==a[i][j+4]):
