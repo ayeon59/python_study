@@ -5,5 +5,10 @@ answers=[0]*n
 cnt = 0
 for i in range(n):
     cnt = arrays[i]
-    answers[cnt] = i
+    find = 0
+    for j in range(n):
+        if(find==cnt):
+            answers[j] = i+1
+        if(answers[j]==0):
+            find += 1
 print(answers)

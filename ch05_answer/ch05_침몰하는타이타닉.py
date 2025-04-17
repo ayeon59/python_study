@@ -20,5 +20,4 @@ while weight:
         weight.pop()
         weight.popleft()
     
-
 print(cnt)
