@@ -5,10 +5,10 @@ lt = 0
 rt = 0
 for x in n :
     if (x.isdigit()):
-        stack.append(x)
+        stack.append(int(x))
     else:
-        rt=int(stack.pop())
-        lt=int(stack.pop())
+        rt=stack.pop()
+        lt=stack.pop()
         if(x=='*'):
             stack.append(lt*rt)
         elif(x=='/'):

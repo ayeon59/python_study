@@ -3,8 +3,7 @@ L = int(input())
 boxes=list(map(int,input().split()))
 
 M = int(input())
-high = 0
-low = 0
+
 for _ in range(M):
     boxes.sort()
     boxes[0] += 1
