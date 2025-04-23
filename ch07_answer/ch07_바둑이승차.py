@@ -1,13 +1,13 @@
-def DFS(L, sum):
+def DFS(L,sum):
     global max_weight
-    if L == num:
+    if(L==num):
         if sum > max_weight:
             max_weight = sum
         return
-    if sum + a[L] <= max:
-        DFS(L + 1, sum + a[L])
-    DFS(L + 1, sum)
-
+    if(sum+a[L]<=max):
+        DFS(L+1,sum+a[L])
+    DFS(L+1,sum)
+    
 
 max, num = map(int,input().split())
 max_weight = 0
