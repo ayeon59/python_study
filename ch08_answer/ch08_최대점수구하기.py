@@ -1,24 +1,22 @@
-import sys
-sys.stdin=open("input.txt", "r")
-def DFS(L, sum, time):
+def DFS(L,time,total):
     global res
-    if time>m:
+    if(time>m):
         return
-    if L==n:
-        if sum>res:
-            res=sum
-    else:
-        DFS(L+1, sum+pv[L], time+pt[L])
-        DFS(L+1, sum, time)
+    if(L==n):
+        if(res<total):
+            res = total
+    else :
+        DFS(L+1,time+pt[L],total+ps[L])
+        DFS(L+1,time,total)
 
-if __name__=="__main__":
-    n, m=map(int, input().split())
-    pv=list()
-    pt=list()
-    for i in range(n):
-        a, b=map(int, input().split())
-        pv.append(a)
-        pt.append(b)
-    res=-2147000000
-    DFS(0, 0, 0)
-    print(res)
+
+n, m =map(int,input().split())
+ps = []
+pt = []
+res = 0
+for i in range(n):
+    a, b = map(int,input().split())
+    ps.append(a)
+    pt.append(b)
+DFS(0,0,0)   
+print(res)
